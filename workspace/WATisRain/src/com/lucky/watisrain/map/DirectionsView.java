@@ -2,7 +2,7 @@ package com.lucky.watisrain.map;
 
 import java.util.List;
 
-import com.lucky.watisrain.R;
+import com.lucky.ihatesnow.R;
 import com.lucky.watisrain.backend.data.Path;
 import com.lucky.watisrain.backend.data.Route;
 import com.lucky.watisrain.backend.data.RouteStep;
