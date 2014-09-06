@@ -19,11 +19,11 @@ public class Global {
 	 * To convert from map_downsized to map_full:
 	 *   (x,y) -> ((x/0.8156)+611, (y/0.8156)+773)
 	 */
-	public static final float MAP_WIDTH = 2048.0f;
-	public static final float MAP_HEIGHT = 964.0f;
-	public static final float MAP_ADJUST_X = 611f;
-	public static final float MAP_ADJUST_Y = 773f;
-	public static final float MAP_ADJUST_SCALING = 0.8156f;
+	public static final float MAP_WIDTH = 2000.0f;
+	public static final float MAP_HEIGHT = 1543.0f;
+	public static final float MAP_ADJUST_X = 0f;
+	public static final float MAP_ADJUST_Y = 100f;;
+	public static final float MAP_ADJUST_SCALING = 0.290866783f;
 
 	public static void println(Object s){
 		Log.d("DEBUG_MSG", s.toString());

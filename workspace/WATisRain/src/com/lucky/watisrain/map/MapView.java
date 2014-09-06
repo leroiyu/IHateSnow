@@ -9,6 +9,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MenuItem;
 
 import com.lucky.watisrain.Global;
@@ -222,6 +223,9 @@ public class MapView extends PhotoView {
 		float map_y = (y * Global.MAP_HEIGHT / Global.MAP_ADJUST_SCALING) + Global.MAP_ADJUST_Y;
 		
 		Building closestBuilding = determineBuildingFromPosition(map_x, map_y, 70);
+		
+		Log.d("User", "In tap");
+		
 		
 		// Reset route if user clicks one of existing endpoints, or something outside
 		if(closestBuilding == null ||

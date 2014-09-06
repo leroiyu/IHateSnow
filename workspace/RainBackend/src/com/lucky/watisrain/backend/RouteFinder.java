@@ -112,9 +112,7 @@ public class RouteFinder {
 						queue.add(next.location);
 					}
 				}
-				
 			}
-			
 			visited.add(cur);
 		}
 		
@@ -125,7 +123,6 @@ public class RouteFinder {
 		// Construct the path backwards from destination
 		Location backtrack = loc2;
 		while(!backtrack.equals(loc1)){
-			
 			List<LocationAndDistance> prevlist = getAdjacentLocations(backtrack);
 			for(LocationAndDistance prev : prevlist){
 				if(Math.abs(prev.distance + distTable.get(prev.location)
@@ -133,8 +130,7 @@ public class RouteFinder {
 					calcPath.add(prev.location);
 					backtrack = prev.location;
 				}
-			}
-			
+			}	
 		}
 		
 		Collections.reverse(calcPath);

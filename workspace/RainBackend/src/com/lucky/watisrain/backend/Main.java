@@ -11,18 +11,16 @@ public class Main {
 
 	public static void main(String... args) throws Throwable{
 		
-		File file = new File("C:/Users/Bai/Desktop/dev/watisrain/deprecated/locations.txt");
+		File file = new File("E:/Projects/MHacks/WATisRain/WATisRain/workspace/WATisRain/assets/locations.txt");
 		Map map = MapFactory.readMapFromFile(file);
 		
 		//map.printDataToStdout();
 		
 		RouteFinder routefinder = new RouteFinder(map);
-		Route route = routefinder.findRoute(map.getLocationByID("MC:6"), map.getLocationByID("UWP"));
+		Route route = routefinder.findRoute(map.getLocationByID("UC"), map.getLocationByID("SH"));
 		
 		route.printRouteToStdout();
 		System.out.println();
-		route.getContractedRoute().printRouteToStdout();
-		
+		//route.getContractedRoute().printRouteToStdout();
 	}
-	
 }
