@@ -1,7 +1,7 @@
-WATisRain
+IHateSnow
 =========
 
-WATisRain is an Android app to help you navigate the buildings of the University of Waterloo without going outside (ie, by going through the various tunnels between buildings). This may prove to be useful when it's raining outside, or if it's freezing cold.
+IHateSnow is an Android app to help you navigate the buildings of the University of Western Ontario without going outside (ie, by going through the various tunnels between buildings).
 
 ### Download
 
@@ -19,7 +19,7 @@ The app is also available as a downloadable [APK file](https://github.com/luckyt
 * Direction list as well as route displayed on map
 * Tells you when to climb up and down stairs
 * 100% open source and ad free
-
+* Forked off the excellent Waterloo version made by Bai Li
 
 
 ### Screenshot
