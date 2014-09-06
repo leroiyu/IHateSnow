@@ -1,56 +1,351 @@
-# Buildings
-
-location UC 2380 2125
-
-	floors 3
-
+location COL 1 1
 ;
 
-location SH 1920 2660
-
-	floors 3
+location WVB 1 1
 ;
 
-
-location STH 1955 2210
-
-	floors 5
+location SDR 1 1
 ;
 
-
-
-# Sample paths
-
-path UC STH
-
-	type indoor_tunnel
-
-	connects 1 1
-
-	p 2315 2230
-
-	p 2044 2175
-
+location 3M 2082 2967
 ;
 
-
-
-path UC SH
-	type briefly_outside
-	connects 1 1
-	p 2320 2425
-	p 2300 2505
-	p 2175 2600
-	p 2030 2641
+location AH 1812 3744
 ;
-path STH SH
- 
-	type briefly_outside
 
-	connects 1 1
+location BGS 2734 744
+;
 
-	p 1950 2330
+location CO 1482 3918
+;
 
-	p 1960 2500
+location DHR 4292 2092
+;
 
+location DSB 1754 516
+;
+
+location ElHR 6062 2318
+;
+
+location HSA 2032 698
+;
+
+location HSB 2524 4018
+;
+
+location IVEY 2540 2832
+;
+
+location KB 2192 1058
+;
+
+location LB 1038 3328
+;
+
+location MB 3190 3288
+;
+
+location MBL 2072 1100
+;
+
+location MC 3722 1614
+;
+
+location MG 2304 1620
+;
+
+location MHR 6576 2542
+;
+
+location MSA 2744 606
+;
+
+location MSB 1846 1056
+;
+
+location NCB 4080 1050
+;
+
+location NSC 2398 944
+;
+
+location PAB 2650 1404
+;
+
+location SEB 1155 4248
+;
+
+location SLB 1956 2210
+;
+
+location SSC 1482 1534
+;
+
+location TC 3538 2930
+;
+
+location TEB 1434 4680
+;
+
+location TH 1862 3182
+;
+
+location TL 2302 638
+;
+
+location UC 2378 2124
+;
+
+location UCC 1034 2138
+;
+
+location VAC 3824 796
+;
+
+location WL 1222 2542
+;
+
+location WSC 3172 1360
+;
+
+location WSS 864 2364
+;
+
+location EC 1388 3952
+;
+
+location SH 1928 2620
+;
+
+location UH 1756 76
+;
+
+location RRI 2174 202
+;
+
+location CB 2584 216
+;
+
+location CS 1628 1250
+;
+
+location MBL 2074 1102
+;
+
+location NCP 2490 816
+;
+
+passive_location THAMESALUMNI 1 1
+passive_location ALUMFORK 1460 3540
+passive_location ENGTUNNEL 1312 3960
+passive_location SCIINTER 2960 1192
+passive_location OXINTER 1976 2438
+passive_location DENTINTER 1964 852
+passive_location HOSPINTER 1860 350
+passive_location MEDINTER 1822 1376
+passive_location MEDMOCINTER 1934 1246
+passive_location SOMINTER 1912 2856
+passive_location PERTHINTER 3862 2498
+passive_location UNIINTER 6106 2498
+passive_location PERTHANDDELI 4000 2028
+passive_location LAMBTON 2272 3314
+
+path TEB SEB
+	p 1434 4680
+	p 1448 4510
+	p 1434 4426
+	p 1155 4248
+;
+
+path SEB ENGTUNNEL
+	p 1155 4248
+	p 1312 3960
+	p 1390 3950
+;
+
+path EC ENGTUNNEL
+	p 1388 3952
+	p 1390 3950
+;
+
+path ENGTUNNEL ALUMFORK
+	p 1390 3950
+	p 1362 3644
+	p 1460 3540
+;
+
+path LB ALUMFORK
+	p 1038 3328
+	p 1284 3452
+	p 1460 3540
+;
+
+path AH THAMESALUMNI
+	p 1812 3744
+	p 1722 3648
+	p 1692 3604
+	p 1724 3408
+;
+
+path THAMESALUMNI TH
+	p 1724 3408
+	p 1738 3338
+	p 1862 3182
+;
+
+path WL UCC
+	p 2542 2542
+	p 1308 2422
+	p 1286 2194
+	p 1030 2136
+;
+
+path UCC SSC
+	p 1030 2136
+	p 1342 1926
+	p 1382 1722
+	p 1482 1534
+;
+
+path PAB KB
+	p 2650 1404
+	p 2534 1570
+	p 2260 1160
+	p 2192 1058
+;
+
+path PAB NSC
+	p 2650 1404
+	p 2532 1250
+	p 2512 1090
+	p 2398 944
+;
+
+path PAB SCIINTER
+	p 2650 1404
+	p 2744 1280
+	p 2960 1192
+;
+
+path SCIINTER BGS
+	p 2960 1192
+	p 2930 1140
+	p 2734 744
+;
+
+path SCIINTER COL
+	p 2960 1192
+	p 3098 1248
+	p 3160 1218
+;
+
+path WSC MC
+	p 3172 1360
+	p 3318 1168
+	p 3486 1466
+	p 3722 1614
+;
+
+path KB NSC
+	p 2192 1058
+	p 2200 992
+	p 2264 910
+	p 2398 944
+;
+
+path HSA NSC
+	p 2032 698
+	p 2198 824
+	p 2264 910
+	p 2398 944
+;
+
+path TC MB
+	p 3538 2930
+	p 3392 3056
+	p 3292 3062
+	p 3190 3288
+;
+
+path SH OXINTER
+	p 1928 2620
+	p 1960 2504
+	p 1976 2438
+;
+
+path OXINTER UCC
+	p 1976 2438
+	p 1642 2322
+	p 1034 2138
+;
+
+path SLB UC
+	p 1956 2210
+	p 2046 2176
+	p 2312 2226
+	p 2378 2124
+;
+
+path WVB DSB
+	p 1164 454
+	p 1390 494
+	p 1460 504
+	p 1754 516
+;
+
+path SDR DENTINTER
+	p 1258 838
+	p 1372 800
+	p 1808 712
+	p 1964 852
+;
+
+path DSB DENTINTER
+	p 1754 516
+	p 1964 852
+;
+
+path DENTINTER HSA
+	p 1964 852
+	p 2032 698
+;
+
+path SLB OXINTER
+	p 1956 2210
+	p 1950 2338
+	p 1976 2438
+;
+
+path SLB SH
+	p 1956 2210
+	p 1950 2338
+	p 1960 2504
+	p 1928 2620
+;
+
+path SLB SSC
+	p 1956 2210
+	p 1900 2150
+	p 1820 2132
+	p 1712 2014
+	p 1652 2006
+	p 1482 1534
+;
+
+path DSB HOSPINTER
+	p 1754 516
+	p 1878 400
+	p 1860 350
+;
+
+path UH HOSPINTER
+	p 1756 76
+	p 1798 186
+	p 1860 350
+;
+
+path RRI HOSPINTER
+	p 2174 202
+	p 1914 328
 ;
