@@ -11,13 +11,13 @@ public class Main {
 
 	public static void main(String... args) throws Throwable{
 		
-		File file = new File("E:/Projects/MHacks/WATisRain/WATisRain/workspace/WATisRain/assets/locations.txt");
+		File file = new File("/Users/Shirley/Documents/Development/IHateSno/IHateSnow/workspace/WATisRain/assets/locations.txt");
 		Map map = MapFactory.readMapFromFile(file);
 		
 		//map.printDataToStdout();
 		
 		RouteFinder routefinder = new RouteFinder(map);
-		Route route = routefinder.findRoute(map.getLocationByID("AH"), map.getLocationByID("LB"));
+		Route route = routefinder.findRoute(map.getLocationByID("DHR"), map.getLocationByID("MC"));
 		
 		route.printRouteToStdout();
 		System.out.println();
