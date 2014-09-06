@@ -224,9 +224,6 @@ public class MapView extends PhotoView {
 		
 		Building closestBuilding = determineBuildingFromPosition(map_x, map_y, 70);
 		
-		Log.d("User", "In tap");
-		
-		
 		// Reset route if user clicks one of existing endpoints, or something outside
 		if(closestBuilding == null ||
 				closestBuilding.getName().equals(selectedBuilding1) ||

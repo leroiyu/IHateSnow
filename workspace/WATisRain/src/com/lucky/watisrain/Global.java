@@ -22,7 +22,7 @@ public class Global {
 	public static final float MAP_WIDTH = 2000.0f;
 	public static final float MAP_HEIGHT = 1543.0f;
 	public static final float MAP_ADJUST_X = 0f;
-	public static final float MAP_ADJUST_Y = 100f;;
+	public static final float MAP_ADJUST_Y = 0f;;
 	public static final float MAP_ADJUST_SCALING = 0.290866783f;
 
 	public static void println(Object s){

@@ -8,6 +8,7 @@ import android.app.Activity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.util.Log;
 
 import uk.co.senab.photoview.*;
 import uk.co.senab.photoview.PhotoViewAttacher.OnPhotoTapListener;
@@ -23,13 +24,13 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-
+		
 		mapView = (MapView) findViewById(R.id.mapImageView);
 		attacher = new PhotoViewAttacher(mapView);
 		mapView.attacher = attacher;
 		mapView.directionsView = (DirectionsView) findViewById(R.id.directions_view);
 		attacher.setMaximumScale(6);
-
+		
 		// Listener called when it's tapped
 		attacher.setOnPhotoTapListener(new OnPhotoTapListener() {
 
