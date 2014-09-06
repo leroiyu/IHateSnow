@@ -13,7 +13,7 @@ import android.util.Log;
 import android.view.MenuItem;
 
 import com.lucky.watisrain.Global;
-import com.lucky.watisrain.R;
+import com.lucky.ihatesnow.R;
 import com.lucky.watisrain.backend.MapFactory;
 import com.lucky.watisrain.backend.RouteFinder;
 import com.lucky.watisrain.backend.Util;
