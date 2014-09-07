@@ -24,4 +24,4 @@ The app is also available as a downloadable [APK file](https://github.com/luckyt
 
 ### Screenshot
 
-![](http://i.imgur.com/ZG2OXiO.jpg)
+![](http://imgur.com/3PekY9F)
