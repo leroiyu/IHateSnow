@@ -7,6 +7,9 @@ location COL 3159 1146
 location WVB 1164 453
 ;
 
+location CRO 1484 3962
+;
+
 location SDR 1254 834
 ;
 
@@ -139,7 +142,13 @@ location MBL 2074 1102
 location NCP 2490 816
 ;
 
-passive_location THAMESALUMNI 1 1
+location MAG 2310 1582
+;
+
+location CML 1398 4316
+;
+
+passive_location THAMESALUMNI 1724 3410
 passive_location ALUMFORK 1460 3540
 passive_location ENGTUNNEL 1312 3960
 passive_location SCIINTER 2960 1192
@@ -155,6 +164,45 @@ passive_location PERTHANDDELI 4000 2028
 passive_location LAMBTON 2272 3314
 passive_location 3MANDIVEY 2264 2954
 passive_location LANDH 2994 3524
+passive_location PMCINT 3750 2050
+passive_location MAGUC 2284 1694
+passive_location MAGSLB 2184 1676 
+passive_location MIDKRES 2248 1322
+passive_location MIDMBL 2048 1204
+passive_location PABK 2474 1732
+passive_location TALINT 3280 2736
+passive_location IBSINT 2628 2602
+passive_location UCKENT 2304 2508
+passive_location LAMBAH 1464 3736
+passive_location CROLAH 1476 3848
+passive_location ECINT 1436 4070
+passive_location MAGSCI 2188 1648
+passive_location TH3M 1888 2954
+passive_location MAGPAB 2328 1702
+passive_location PABUC 2474 1730 
+passive_location UCKENT 2304 2508
+passive_location CROINT 1464 3734
+passive_location ENGINT 1436 4074
+passive_location TUNNEND 1642 2322
+
+path MBL KB
+;	
+
+path TH TH3M
+	p 1862 3182
+	p 1888 2954
+;
+
+path TH3M 3M
+	p 1888 2954
+	p 1962 2990
+	p 2082 2967
+;
+
+path TH3M SH
+	p 2082 2968
+	p 1928 2620
+;
 
 path TEB SEB
 	p 1434 4680
@@ -232,6 +280,18 @@ path PAB NSC
 	p 2398 944
 ;
 
+path PERTHANDDELI PMCINT
+	p 4000 2028
+	p 3920 2038
+	p 3750 2050
+;
+
+path PERTHANDDELI DHR
+	p 4000 2028
+	p 4216 2098
+	p 4292 2092
+;	
+
 path PAB SCIINTER
 	p 2650 1404
 	p 2744 1280
@@ -252,9 +312,16 @@ path SCIINTER COL
 
 path WSC MC
 	p 3172 1360
-	p 3318 1168
+	p 3318 1362
 	p 3486 1466
 	p 3722 1614
+;
+
+path WSC PAB
+	p 3172 1360
+	p 2988	1332
+	p 2818 1446
+	p 2650 1404
 ;
 
 path KB NSC
@@ -284,10 +351,20 @@ path SH OXINTER
 	p 1976 2438
 ;
 
-path OXINTER UCC
+path OXINTER TUNNEND
 	p 1976 2438
+	p 1856 2356
 	p 1642 2322
-	p 1034 2138
+;
+
+path TUNNEND UCC 
+	p 1642 2322
+	p 1164 2136
+;
+
+path TUNNEND WL
+	p 1642 2322
+	p 1222 2542
 ;
 
 path SLB UC
@@ -303,6 +380,8 @@ path WVB DSB
 	p 1460 504
 	p 1754 516
 ;
+
+
 
 path SDR DENTINTER
 	p 1258 838
@@ -458,6 +537,12 @@ path SH TH
 	p 1862 3182
 ;
 
+path DHR PERTHANDDELI
+	p 4292 2092
+	p 4214 2094
+	p 4002 2028
+;
+
 path MHR SYD
 	p 6576 2542
 	p 6404 2720
@@ -487,12 +572,6 @@ path UNIINTER PERTHINTER
 path PERTHINTER PERTHANDDELI
 	p 3862 2498
 	p 4000 2028
-;
-
-path PERTHANDDELI DHR
-	p 4000 2028
-	p 4216 2098
-	p 4292 2092
 ;
 
 path PERTHANDDELI NCB
@@ -562,18 +641,22 @@ path PERTHINTER UC
 	p 2378 2124
 ;
 
-path PERTHINTER MC
+path PERTHINTER PMCINT
 	p 3862 2498
 	p 3810 2356
 	p 3770 2258
 	p 3780 2102
+	p 3750 2050
+;
+
+path PMCINT MC	
+	p 3750 2050	
 	p 3722 1990
 	p 3696 1856
 	p 3716 1726
 	p 3668 1668
 	p 3722 1614
 ;
-
 
 path MC UC
 	p 3722 1614
@@ -587,3 +670,160 @@ path LANDH HSB
 	p 2798 4112
 	p 2740 4096
 ;
+
+path MAG MAGUC
+	p 2310 1582
+	p 2284 1694
+;
+
+path MAGUC UC
+	p 2284 1694
+	p 2296 1770
+	p 2336 1832
+	p 2302 1994
+	p 2358 2010
+	p 2378 2124
+;
+
+path MAGUC MAGSLB
+	p 2284 1694
+	p 2310 1582
+
+path MAGSLB SLB 
+    p 2310 1582
+	p 2154 1894
+	p 1956 2210
+;
+
+path MAGSLB SSC
+	p 2310 1582
+	p 2012 1642
+	p 1830 1622
+	p 1742 1626
+	p 1482 1534
+;
+
+path MAGUC MAGPAB
+	p 2284 1694
+	p 2328 1702
+;
+
+path MAGPAB PAB
+	p 2328 1702
+	p 2542 1554
+	p 2650 1404
+;
+
+path MAGPAB PABUC
+	p 2328 1702
+	p 2474 1730 
+;
+
+path UC PABUC
+	p 2378 2124
+	p 2474 1730
+;
+
+path PABUC PAB
+	p 2510 1586
+	p 2542 1552
+;
+
+path PERTHINTER TALINT
+	p 3862 2498
+	p 3722 2525
+	p 2490 2600
+	p 3280 2734
+;
+
+path TALINT TC
+	p 3280 2734
+	p 3490 2812
+	p 3538 2930
+;
+
+path TALINT IBSINT 
+	p 3280 2734
+	p 2628 2604
+;	
+
+path IBSINT IVEY 
+	p 2628 2604
+	p 2574 2686
+	p 2532 2678
+	p 2540 2832
+;
+
+path IBSINT UCKENT
+	p 2628 2604
+	p 2304 2508
+;
+
+path UCKENT UC
+	p 2304 2508
+	p 2378 2124
+;
+
+path UCKENT SOMINTER
+	p 2304 2508
+	p 1912 2856
+;	
+
+path HSB AH
+	p 2524 4018
+	p 2334 4044
+	p 2234 3978
+	p 2056 3862
+	p 2006 3750
+	p 1974 3760
+	p 1812 3746
+;
+
+path AH CROINT
+	p 1812 3746
+	p 1464 3734
+;
+
+path CROINT CRO
+	p 1464 3734
+	p 1484 3922	
+	p 1484 3962
+;
+
+
+path CROINT EC
+	p 1464 3734
+	p 1408 3746
+	p 1362 3888
+	p 1388 3952
+;
+
+path EC ENGINT
+	p 1388 3952
+	p 1436 4074
+;
+
+path ENGINT CML
+	p 1478 4270
+	p 1476 4266
+	p 1436 4074
+;		
+
+path ENGINT SEB
+	p 1478 4270
+	p 1314 4080
+	p 1216 4144
+	p 1155 4248	
+;	
+
+path SEB CML
+	p 1155 4248
+	p 1436 4074
+;
+
+path SEB LB
+	p 1155 4248
+	p 1046 3918
+	p 1042 3808
+	p 926 3524
+;			
