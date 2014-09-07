@@ -671,7 +671,6 @@ path PMCINT MC
 	p 3722 1614
 ;
 
-<<<<<<< HEAD
 path TH 3M 
 	p 1892 2952
 	p 1962 2994
@@ -686,8 +685,6 @@ path MC NCB
 	p 3878 1104
 ;
 
-=======
->>>>>>> master
 path MC UC
 	p 3722 1614
 	p 2572 2270
