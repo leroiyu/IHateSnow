@@ -103,7 +103,7 @@ public class MapView extends PhotoView {
 			if(!building.isSelectable()) continue;
 			
 			Waypoint pos = building.getMainFloor().getPostion();
-			mapdraw.drawImageOnMap(imgs.get("default_location.png"),pos.getX(),pos.getY(),120);
+			mapdraw.drawImageOnMap(imgs.get("default_location.png"),pos.getX(),pos.getY(),240);
 		}
 		
 		// draw route
@@ -124,7 +124,7 @@ public class MapView extends PhotoView {
 			if(building.getName().equals(selectedBuilding1) ||
 			   building.getName().equals(selectedBuilding2)){
 				
-				mapdraw.drawImageOnMap(imgs.get("active_location.png"),pos.getX(),pos.getY(),120);
+				mapdraw.drawImageOnMap(imgs.get("active_location.png"),pos.getX(),pos.getY(),240);
 			}
 		}
 		
