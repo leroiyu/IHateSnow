@@ -16,7 +16,7 @@
 		
 		    <com.lucky.watisrain.map.DirectionsView
 		        android:id="@+id/directions_view"
-		        android:layout_marginTop="100dp"
+		        android:layout_marginTop="50dp"
 		       	android:layout_marginLeft="10dp"
 		    	android:layout_width="300dp"
 		        android:layout_height="wrap_content"
