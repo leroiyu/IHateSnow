@@ -1,16 +1,7 @@
 IHateSnow
 =========
 
-IHateSnow is an Android app to help you navigate the buildings of the University of Western Ontario without going outside (ie, by going through the various tunnels between buildings).
-
-### Download
-
-<a href="https://play.google.com/store/apps/details?id=com.lucky.watisrain">
-  <img alt="Get it on Google Play"
-       src="http://developer.android.com/images/brand/en_generic_rgb_wo_45.png" />
-</a>
-
-The app is also available as a downloadable [APK file](https://github.com/luckytoilet/WATisRain/releases/download/v0.2/WATisRain-0.2.apk?raw=true).
+IHateSnow is an Android app to help you navigate the buildings of the University of Western Ontario without going outside (ie, by going through the various tunnels between buildings). The project is a fork of WATisRain and was built for MHacks IV. 
 
 ### Features
 
@@ -24,4 +15,4 @@ The app is also available as a downloadable [APK file](https://github.com/luckyt
 
 ### Screenshot
 
-![](http://imgur.com/3PekY9F)
+![](http://i.imgur.com/3PekY9F.png)
