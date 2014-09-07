@@ -3,6 +3,10 @@ package com.lucky.watisrain;
 import uk.co.senab.photoview.PhotoViewAttacher;
 import uk.co.senab.photoview.PhotoViewAttacher.OnPhotoTapListener;
 import android.annotation.TargetApi;
+import com.lucky.ihatesnow.R;
+import com.lucky.watisrain.map.*;
+
+import android.os.Bundle;
 import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;

@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.lucky.watisrain;
+package com.lucky.ihatesnow;
 
 public final class R {
     public static final class array {
