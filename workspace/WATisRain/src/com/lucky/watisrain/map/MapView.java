@@ -103,7 +103,7 @@ public class MapView extends PhotoView {
 			if(!building.isSelectable()) continue;
 			
 			Waypoint pos = building.getMainFloor().getPostion();
-			mapdraw.drawImageOnMap(imgs.get("default_location.png"),pos.getX(),pos.getY(),120);
+			mapdraw.drawImageOnMap(imgs.get("default_location.png"),pos.getX(),pos.getY(),240);
 		}
 		
 		// draw route
@@ -124,7 +124,7 @@ public class MapView extends PhotoView {
 			if(building.getName().equals(selectedBuilding1) ||
 			   building.getName().equals(selectedBuilding2)){
 				
-				mapdraw.drawImageOnMap(imgs.get("active_location.png"),pos.getX(),pos.getY(),120);
+				mapdraw.drawImageOnMap(imgs.get("active_location.png"),pos.getX(),pos.getY(),240);
 			}
 		}
 		
@@ -220,9 +220,9 @@ public class MapView extends PhotoView {
 		// Convert to map units
 		// On map_full, it is (x * width, y * height). Then we perform scaling.
 		float map_x = (x * Global.MAP_WIDTH / Global.MAP_ADJUST_SCALING) + Global.MAP_ADJUST_X;
-		float map_y = (y * Global.MAP_HEIGHT / Global.MAP_ADJUST_SCALING) - 100.0f; // adjust for cropping
+		float map_y = (y * Global.MAP_HEIGHT / Global.MAP_ADJUST_SCALING) - 115.0f; // adjust for cropping
 		
-		Building closestBuilding = determineBuildingFromPosition(map_x, map_y, 70);
+		Building closestBuilding = determineBuildingFromPosition(map_x, map_y, 105);
 		
 		// Reset route if user clicks one of existing endpoints, or something outside
 		if(closestBuilding == null ||
