@@ -1,5 +1,14 @@
 package com.lucky.watisrain.map;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedHashSet;
+import java.util.List;
+
+import uk.co.senab.photoview.PhotoView;
+import uk.co.senab.photoview.PhotoViewAttacher;
 import android.content.Context;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
@@ -9,7 +18,6 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MenuItem;
 
 import com.lucky.watisrain.Global;
@@ -24,20 +32,11 @@ import com.lucky.watisrain.backend.data.Route;
 import com.lucky.watisrain.backend.data.RouteStep;
 import com.lucky.watisrain.backend.data.Waypoint;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedHashSet;
-import java.util.List;
-
-import uk.co.senab.photoview.PhotoView;
-import uk.co.senab.photoview.PhotoViewAttacher;
-
 /**
  * Class that draws the map. It handles reading and storing the Map object.
  */
 public class MapView extends PhotoView {
+	private HashMap<String, String> locs; 
 	
 	// Needed because PhotoView.getDisplayRect doesn't actually work
 	public PhotoViewAttacher attacher;
@@ -82,6 +81,82 @@ public class MapView extends PhotoView {
 		imgs.put("active_location.png", BitmapFactory.decodeResource(getResources(), R.drawable.active_location));
 		imgs.put("stairs_up.png", BitmapFactory.decodeResource(getResources(), R.drawable.stairs_up));
 		imgs.put("stairs_down.png", BitmapFactory.decodeResource(getResources(), R.drawable.stairs_down));
+		
+		// Map from long names of locations to abbrevs
+		locs = new HashMap<String, String>();
+		
+		locs.put("Biological & Geological Sciences", "BGS");
+		locs.put("University College", "UC");
+		locs.put("Thames Hall", "TH");
+		locs.put("University and Residence Intersection", "UNIINTER");
+		locs.put("Music Building", "MB");
+		locs.put("Elgin Hall", "ElHR");
+		locs.put("Dental Sciences Building", "DSB");
+		locs.put("Natural Sciences Centre", "NSC");
+		locs.put("Delaware", "DHR");
+		locs.put("Medical Sciences Intersection", "MEDINTER");
+		locs.put("Thompson Engineering Building", "TEB");
+		locs.put("Western Student Services", "WSS");
+		locs.put("Oxford Drive Intersection", "OXINTER");
+		locs.put("Spencer Engineering Building", "SEB");
+		locs.put("West Valley Building", "WVB");
+		locs.put("3M Centre", "3M");
+		locs.put("Collip", "COL");
+		locs.put("Law Building", "LB");
+		locs.put("Molecular Biology Laboratory", "MBL");
+		locs.put("3M and Ivey", "3MANDIVEY");
+		locs.put("Talbot College", "TC");
+		locs.put("Chemistry Building", "CB");
+		locs.put("Ivey Business School", "IVEY");
+		locs.put("Health Sciences Addition", "HSA");
+		locs.put("Labatt Health Sciences Building", "HSB");
+		locs.put("University Hospital", "UH");
+		locs.put("Alumni Roundabout Tunnel Fork", "ALUMFORK");
+		locs.put("Lambton and Huron", "LANDH");
+		locs.put("Perth and University Intersection", "PERTHINTER");
+		locs.put("Social Science Centre", "SSC");
+		locs.put("Medical Sciences Building", "MSB");
+		locs.put("Somerville House Intersection", "SOMINTER");
+		locs.put("Lambton and Kent", "LAMBTON");
+		locs.put("Sydenham Hall", "SYD");
+		locs.put("North Campus Building", "NCB");
+		locs.put("Cronyn Observatory", "CO");
+		locs.put("Science Building Intersection", "SCIINTER");
+		locs.put("Engineering Classroom Tunnel", "ENGTUNNEL");
+		locs.put("Perth and Delaware", "PERTHANDDELI");
+		locs.put("McIntosh Gallery", "MG");
+		locs.put("Western Sciences Centre", "WSC");
+		locs.put("Clinical Skills", "CS");
+		locs.put("Robarts Research Institute", "RRI");
+		locs.put("University Community Centre", "UCC");
+		locs.put("Engineering Classroom", "EC");
+		locs.put("Physics & Astronomy Building", "PAB");
+		locs.put("Siebens-Drake Research Institute", "SDR");
+		locs.put("Medway Hall", "MHR");
+		locs.put("Visual Arts", "VAC");
+		locs.put("Somerville House", "SH");
+		locs.put("N.C.P.", "NCP");
+		locs.put("Medical Molecular Intersection", "MEDMOCINTER");
+		locs.put("Hospital-Dental Intersection", "HOSPINTER");
+		locs.put("Material Science Addition", "MSA");
+		locs.put("Dental Health Intersection", "DENTINTER");
+		locs.put("The D.B. Weldon Library", "WL");
+		locs.put("Molecular Biology Lab", "MBL");
+		locs.put("Thames-Alumni Tunnel Intersection", "THAMESALUMNI");
+		locs.put("Taylor Library", "TL");
+		locs.put("Middlesex College", "MC");
+		locs.put("Stevenson-Lawson Building", "SLB");
+		locs.put("Alumni Hall", "AH");
+		locs.put("Kresge Building", "KB");
+	}
+	
+	/**
+	 * Get corresponding abbreviation for a location's long name 
+	 * @param lname
+	 * @return abbreviation
+	 */
+	public String getAbbrev(String lname){
+		return locs.get(lname);
 	}
 
 	@Override
@@ -235,12 +310,18 @@ public class MapView extends PhotoView {
 			directionsView.selectDestination(selectedBuilding1);
 		}else{
 			selectedBuilding2 = closestBuilding.getName();
-			
 			updateRoute();
 		}
 		
 	}
 	
+	public void setBuilding1(String abbr){
+		selectedBuilding1 = abbr;
+	}
+	
+	public void setBuilding2(String abbr){
+		selectedBuilding2 = abbr;
+	}
 	
 	/**
 	 * Clear any route or selected buildings, as well as text view
@@ -255,9 +336,13 @@ public class MapView extends PhotoView {
 		invalidate();
 	}
 	
+	public DirectionsView getDirectionsView() {
+		return this.directionsView;
+	}
+	
 	
 	// Assumes selectedBuilding[1,2] are the correct ones.
-	private void updateRoute(){
+	public void updateRoute(){
 		
 		route = routefinder.findRoute(map.getBuildingByID(selectedBuilding1),
 									  map.getBuildingByID(selectedBuilding2)).getContractedRoute();

@@ -57,5 +57,11 @@ while curr_row < paths_sheet.nrows - 1:
 
 	curr_row += 1
 
+long_names = ''
+for name in name_to_abbr:
+	# locs.put("3M Centre", "3M");
+	long_names += 'locs.put("' + name + '", "' + name_to_abbr[name] + '");\n'
+
 print output
+print long_names
 		

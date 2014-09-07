@@ -23,7 +23,6 @@ public class DirectionsView extends LinearLayout implements OnClickListener {
 	// Directions backed by an internal TextView
 	TextView textview;
 	
-	
 	// HTML strings for directions.
 	// Collapsed directions only show start and end location.
 	CharSequence directions_long = "";
