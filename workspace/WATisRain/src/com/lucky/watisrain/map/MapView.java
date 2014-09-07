@@ -220,7 +220,7 @@ public class MapView extends PhotoView {
 		// Convert to map units
 		// On map_full, it is (x * width, y * height). Then we perform scaling.
 		float map_x = (x * Global.MAP_WIDTH / Global.MAP_ADJUST_SCALING) + Global.MAP_ADJUST_X;
-		float map_y = (y * Global.MAP_HEIGHT / Global.MAP_ADJUST_SCALING) + Global.MAP_ADJUST_Y;
+		float map_y = (y * Global.MAP_HEIGHT / Global.MAP_ADJUST_SCALING) - 100.0f; // adjust for cropping
 		
 		Building closestBuilding = determineBuildingFromPosition(map_x, map_y, 70);
 		
@@ -238,7 +238,6 @@ public class MapView extends PhotoView {
 			
 			updateRoute();
 		}
-		
 	}
 	
 	

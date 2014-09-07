@@ -57,5 +57,9 @@ while curr_row < paths_sheet.nrows - 1:
 
 	curr_row += 1
 
+name_output = ""
+for name in name_to_abbr:
+	name_output += name + "," + name_to_abbr[name] + "\n"
+
 print output
-		
+print name_output		
